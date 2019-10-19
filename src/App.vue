@@ -1,28 +1,37 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <app-bar title="INTERST" left="search" right="planet"></app-bar>
+    <tab-list></tab-list>
+    <card-list></card-list>
+    <card-detail></card-detail>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import AppBar from './components/AppBar.vue'
+import TabList from './components/TabList.vue'
+import CardList from './components/CardList.vue'
+import CardDetail from './components/CardDetail.vue'
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    AppBar,
+    TabList,
+    CardList,
+    CardDetail
   }
 }
 </script>
 
 <style lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  color: white;
+  background-image: linear-gradient(to top, #99acbe 5%, #a8b3bf 20%, #cfd7dd);
 }
 </style>
